@@ -33,23 +33,13 @@ class Home extends React.Component {
 
         return (
             <div className="home">
-                <ul id="links">
-                    <li><a href="mailto:liu.sonnys@gmail.com"><img src={EmailLogo} className="svg-icon" alt="logo" /></a></li>
-                    <li><a href="https://www.linkedin.com/in/sonny-liu/"><img src={LinkedInLogo} className="svg-icon" alt="logo" /></a></li>
-                    <li><a href="https://github.com/thescigeek"><img src={GitHubLogo} className="svg-icon" alt="logo" /></a></li>
-                </ul>
                 <ul id="menu">
                     <li data-menuanchor="cover"><a href="#cover"><i className="fa fa-home"></i></a></li>
                     <li data-menuanchor="about"><a href="#about"><i className="fa fa-info"></i></a></li>
                     <li data-menuanchor="projects"><a href="#projects"><i className="fa fa-folder"></i></a></li>
                 </ul>
-                <div id="credit">
-                    <span>&copy; Copyright 2021 Sonny Liu</span>
-                </div>
-
                 <ReactFullpage
                     //licenseKey = {'YOUR_KEY_HERE'}
-
                     anchors={anchors}
                     menu="#menu"
                     dragAndMove="true"
@@ -61,9 +51,9 @@ class Home extends React.Component {
                         console.log("render prop change", state, fullpageApi);
                         return (
                             <ReactFullpage.Wrapper>
-                                <Cover />
-                                <About />
-                                <Projects />
+                                <Section headerText={"sonny liu"} />
+                                <Section headerText={"about"} />
+                                <Section headerText={"projects"} />
                             </ReactFullpage.Wrapper>
                         );
                     }}
@@ -73,43 +63,38 @@ class Home extends React.Component {
     }
 }
 
-class Cover extends React.Component {
+class Section extends React.Component {
     render() {
         return (
-            <div className="section page-cover">
-                <div className="sp-title">
-                    <span>sonny liu</span>
-                </div>
-                <div className="sp-subtitle">
-                    <span>Programmer with too many dreams and not enough time...</span>
-                </div>
+            <div className="section">
+                {header(this.props.headerText)}
+                {footer}
             </div>
         );
     }
 }
 
-class About extends React.Component {
-    render() {
-        return (
-            <div className="section page-about">
-                <div className="sp-title">
-                    <span>about</span>
-                </div>
+function header(title) {
+    return (
+        <div>
+            <div className="section-title">
+                <span>{title}</span>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
-class Projects extends React.Component {
-    render() {
-        return (
-            <div className="section page-projects">
-                <div className="sp-title">
-                    <span>projects</span>
-                </div>
-            </div>
-        );
-    }
-}
+const footer = (
+    <div>
+        <ul className="section-links">
+            <li><a href="mailto:liu.sonnys@gmail.com"><img src={EmailLogo} className="svg-icon" alt="logo" /></a></li>
+            <li><a href="https://www.linkedin.com/in/sonny-liu/"><img src={LinkedInLogo} className="svg-icon" alt="logo" /></a></li>
+            <li><a href="https://github.com/thescigeek"><img src={GitHubLogo} className="svg-icon" alt="logo" /></a></li>
+        </ul>
+        <div className="section-credit">
+            <span>&copy; Copyright 2021 Sonny Liu</span>
+        </div>
+    </div>
+);
 
 export default Home;
