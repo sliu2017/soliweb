@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Cover = (
-    <div>
-        <img src={`${process.env.PUBLIC_URL}/images/cover/cover-pixelated-img.png`} alt="Not quite blond" className="cover-image" />
+    <div className="cover-body-container">
+        <img src={`${process.env.PUBLIC_URL}/images/cover/cover-pixelated-no-background-img.png`} alt="Not quite blond" className="cover-body-foreground" />
     </div>
 );
 

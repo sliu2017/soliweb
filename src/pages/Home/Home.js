@@ -8,26 +8,7 @@ import SectionsData from '../../data/sections';
 import './Home.css';
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            windowDimensions: '{width:0, height:0}',
-        }
-    }
-
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions.bind(this));
-    }
-
-    updateWindowDimensions() {
-        let windowWidth = window.innerWidth;
-        let windowHeight = window.innerHeight;
-        this.setState({
-            windowDimensions: { width: windowWidth, height: windowHeight },
-        });
-    }
-
+    
     render() {
         const anchors = [];
         const colors = [];
@@ -56,10 +37,10 @@ class Home extends React.Component {
                     dragAndMove="true"
                     sectionsColor={colors}
                     onLeave={(origin, destination, direction) => {
-                        console.log("onLeave event", { origin, destination, direction });
+                        // console.log("onLeave event", { origin, destination, direction });
                     }}
                     render={({ state, fullpageApi }) => {
-                        console.log("render prop change", state, fullpageApi);
+                        // console.log("render prop change", state, fullpageApi);
                         return (
                             <ReactFullpage.Wrapper>
                                 {SectionsData.map((x) => (

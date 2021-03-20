@@ -3,7 +3,11 @@
 }
 
 #menu {
-    /* Top centers menu vertically by subtracting by total height of the menu */
+    /* 
+     * Top centers menu vertically by subtracting by total height of the menu 
+     * so if the number of menu items change, the calc for top will also have
+     * to change.
+     */
     position: absolute;
     right: 1.5vh;
     top: calc(50% - 13.25vh); 
@@ -114,7 +118,40 @@
     font-size: 2vh;
 }
 
-.cover-image {
+.cover-body-container {
+    position: absolute;
+    width: 46.6vh;
+    height: 70vh;
+    top: calc(50% - 35vh);
+    left: calc(50% - 23.3vh);
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(359deg, #ffffff, #ececec);
+    background-size: 400% 400%;
+
+    -webkit-animation: CoverBodyBackground 16s ease infinite;
+    -moz-animation: CoverBodyBackground 16s ease infinite;
+    animation: CoverBodyBackground 16s ease infinite;
+}
+
+@-webkit-keyframes CoverBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes CoverBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes CoverBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+.cover-body-foreground {
     height: 70vh;
 }
 
