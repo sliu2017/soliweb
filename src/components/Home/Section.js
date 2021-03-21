@@ -17,7 +17,13 @@ class Section extends React.Component {
                 <ul className="section-links">
                     {ContactData.map((x) => (
                         <li key={x.key}>
-                            <a href={x.link}><img src={x.icon} className="svg-icon" alt="logo" /></a>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={x.link}
+                            >
+                                <img src={x.icon} className="svg-icon" alt="logo" />
+                            </a>
                         </li>
                     ))}
                 </ul>

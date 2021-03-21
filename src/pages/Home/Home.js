@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-
 import Section from '../../components/Home/Section';
-
 import SectionsData from '../../data/sections';
-
 import './Home.css';
 
 class Home extends React.Component {
@@ -44,7 +41,11 @@ class Home extends React.Component {
                         return (
                             <ReactFullpage.Wrapper>
                                 {SectionsData.map((x) => (
-                                    <Section key={x.anchor} headerText={x.header} bodyContent={x.body} />
+                                    <Section
+                                        key={x.anchor}
+                                        headerText={x.header}
+                                        bodyContent={x.body}
+                                    />
                                 ))}
                             </ReactFullpage.Wrapper>
                         );

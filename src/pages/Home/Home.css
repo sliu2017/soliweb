@@ -127,7 +127,7 @@
     margin: 0;
     padding: 0;
 
-    background: linear-gradient(359deg, #ffffff, #ececec);
+    background: linear-gradient(0deg, #ffffff, #ececec);
     background-size: 400% 400%;
 
     -webkit-animation: CoverBodyBackground 16s ease infinite;
@@ -164,7 +164,7 @@
     margin: 0;
     padding: 0;
 
-    background: linear-gradient(359deg, #2d4351, #2c2358);
+    background: linear-gradient(0deg, #2d4351, #2c2358);
     background-size: 400% 400%;
 
     -webkit-animation: AboutBodyBackground 16s ease infinite;
@@ -197,17 +197,20 @@
     position: absolute;
     top: calc(50% - 35vh);
     left: calc(50% - 23.3vh);
+    margin: 1.5vh 1vh 0 1vh;
     font-family: 'Roboto', sans-serif;
     font-size: 2vh;
     color: #ededed;
+    text-decoration: none;
 }
 
-.about-body-caption h1 {
-    margin: 1.5vh 0 0 0;
+.about-body-caption-first {
+    font-size: 4.5vh;
+    margin: 0;
     padding: 0;
 }
 
-.about-body-caption p {
+.about-body-caption-second {
     margin: 0;
     padding: 0;
 }
@@ -215,7 +218,7 @@
 .about-body-resume {
     position: absolute;
     bottom: 1.5vh;
-    left: calc(50% - 8vh);
+    left: calc(50% - 10vh);
     padding: 1.5vh 3vh 1vh 3vh;
     background: rgba(0, 0, 0, 0.5);
     border: none;
@@ -230,6 +233,85 @@
 .about-body-resume a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 2vh;
+    font-size: 3vh;
     color: #fff;
+}
+
+.projects-body-container {
+    position: absolute;
+    width: 46.6vh;
+    height: 70vh;
+    top: calc(50% - 35vh);
+    left: calc(50% - 23.3vh);
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(0deg, #3f4042, #1c1d1f);
+    background-size: 400% 400%;
+
+    -webkit-animation: ProjectsBodyBackground 16s ease infinite;
+    -moz-animation: ProjectsBodyBackground 16s ease infinite;
+    animation: ProjectsBodyBackground 16s ease infinite;
+}
+
+@-webkit-keyframes ProjectsBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes ProjectsBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes ProjectsBodyBackground {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+.focusRing___1airF.carousel__slide-focus-ring {
+    outline: none !important;
+}
+
+.projects-body-slide {
+    position: absolute;
+    width: 40vh;
+    height: 60vh;
+    top: calc(50% - 30vh);
+    left: calc(50% - 20vh);
+    margin: 0;
+    padding: 0;
+}
+
+.projects-body-backgroundimage {
+    height: 60vh;
+}
+
+.projects-body-dotgroup {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5vh;
+    z-index: 60;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel__dot {
+    margin: 0 0.5vh;
+    height: 3.5vh;
+    width: 3.5vh;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+    outline: none !important;
+}
+
+.carousel__dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel__dot--selected, .carousel__dot--selected:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
