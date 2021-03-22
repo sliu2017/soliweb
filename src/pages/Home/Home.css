@@ -218,10 +218,14 @@
 .about-body-resume {
     position: absolute;
     bottom: 1.5vh;
-    left: calc(50% - 10vh);
-    padding: 1.5vh 3vh 1vh 3vh;
+    left: calc(50% - 11vh);
+    width: 22vh;
+    height: 6vh;
+    padding: 1.5vh 0vh 1vh 0vh;
+    margin: 0;
     background: rgba(0, 0, 0, 0.5);
     border: none;
+    outline: none;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -230,7 +234,7 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
-.about-body-resume a {
+.about-body-resume span {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 3vh;
@@ -282,6 +286,7 @@
     left: calc(50% - 20vh);
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .projects-body-backgroundimage {
@@ -314,4 +319,129 @@
 
 .carousel__dot--selected, .carousel__dot--selected:hover {
     background: rgba(255, 255, 255, 0.8);
+}
+
+.projcap {
+    position: absolute;
+    left: 0;
+    top: 54vh;
+    width: 100%;
+    height: 60vh;
+    padding: 0;
+    margin: 0;
+}
+.projcap-background {
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.projcap-background-collapsed {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.projcap-background-expanded {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-34vh);
+}
+
+.projcap-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6vh;
+    z-index: 40;
+    padding: 1.5vh 0vh 1vh 0vh;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projcap-title span {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    color: #fff;
+}
+
+.projcap-title-collapsed:hover ~ .projcap-background-collapsed {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.projcap-detail {
+    position: absolute;
+    left: 0;
+    top: 6vh;
+    width: 100%;
+    height: 34vh;
+    z-index: 40;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.projcap-detail span {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    color: #fff;
+}
+
+.projcap-detail p {
+    padding: 0 1vh;
+    margin: 1vh 0vh;
+    text-decoration: none;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    color: #fff;
+}
+
+.projcap-links {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 1vh 0;
+}
+
+.projcap-links a {
+    margin: 0 0.5vh;
+}
+
+.projcap-links a button {
+    width: 8vh;
+    height: 4vh;
+    padding: 1vh 0vh 1vh 0vh;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projcap-links a button:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.projcap-links a button span {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    color: #fff;
+}
+
+.projcap-title-expanded, .projcap-detail-expanded {
+    transform: translateY(-34vh);
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
+import ProjectsCaption from './ProjectsCaption';
 import ProjectsData from '../../data/projects';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -28,6 +29,15 @@ const Projects = (
                                 src={`${process.env.PUBLIC_URL}/images/projects/${x.backgroundImage}`}
                                 alt={x.name}
                                 className="projects-body-backgroundimage"
+                            />
+                            <ProjectsCaption
+                                name={x.name}
+                                summary={x.summary}
+                                skills={x.skills}
+                                demoExists={x.demoExists}
+                                repoExists={x.repoExists}
+                                demoLink={x.demoLink}
+                                repoLink={x.repoLink}
                             />
                         </div>
                     </Slide>

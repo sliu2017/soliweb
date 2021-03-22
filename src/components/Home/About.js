@@ -13,15 +13,16 @@ const About = (
             <span>Dreamer, Programmer, Gamer, Developer, Writer, and Soon-to-be UMD Graduate.</span>
             {/* ["Dreamer", "Programmer", "Gamer", "Developer", "Writer", "Soon-to-be UMD Graduate"] */}
         </div>
-        <button type="button" className="about-body-resume">
-            <a
-                href={`${process.env.PUBLIC_URL}/resumedl/SonnyLiu_ResumeVer1.pdf`}
-                download="SonnyLiuResume"
-            >
-                <i className="fa fa-download"></i> Résumé
-            </a>
-        </button>
-    </div>
+
+        <a
+            href={`${process.env.PUBLIC_URL}/resumedl/SonnyLiu_ResumeVer1.pdf`}
+            download="SonnyLiuResume"
+        >
+            <button type="button" className="about-body-resume">
+                <span><i className="fa fa-download"></i> Résumé</span>
+            </button>
+        </a>
+    </div >
 );
 
 export default About;
