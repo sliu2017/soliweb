@@ -18,15 +18,15 @@ class ProjectsCaption extends React.Component {
 
     render() {
         return (
-            <div className="projcap">
+            <div className={`projcap ${this.state.collapsed ? 'projcap-collapsed' : 'projcap-expanded'}`}>
                 <button
                     type="button"
                     onClick={this.toggleCollapsed}
-                    className={`projcap-title ${this.state.collapsed ? 'projcap-title-collapsed' : 'projcap-title-expanded'}`}
+                    className="projcap-title"
                 >
                     <span>{this.props.name}</span>
                 </button>
-                <div className={`projcap-detail ${this.state.collapsed ? 'projcap-detail-collapsed' : 'projcap-detail-expanded'}`}>
+                <div className="projcap-detail">
                     {this.props.skills.map((x, i) => {
                         return (i !== (this.props.skills.length - 1))
                             ? <span key={x}>{x} | </span>
@@ -58,7 +58,6 @@ class ProjectsCaption extends React.Component {
                         }
                     </div>
                 </div>
-                <div className={`projcap-background ${this.state.collapsed ? 'projcap-background-collapsed' : 'projcap-background-expanded'}`}></div>
             </div>
         );
     }

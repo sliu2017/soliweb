@@ -323,38 +323,30 @@
 
 .projcap {
     position: absolute;
-    left: 0;
+    left: -6vh;
     top: 54vh;
     width: 100%;
-    height: 60vh;
-    padding: 0;
+    padding: 0 6vh 6vh 6vh;
     margin: 0;
-}
-.projcap-background {
-    width: 100%;
-    height: 100%;
-    z-index: 30;
-    border: none;
-    outline: none;
     transition: 0.3s;
 }
 
-.projcap-background-collapsed {
+.projcap-collapsed {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.projcap-background-expanded {
+.projcap-collapsed:hover {
     background: rgba(0, 0, 0, 0.8);
-    transform: translateY(-34vh);
+}
+
+.projcap-expanded {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(calc(-100% + 12vh));
 }
 
 .projcap-title {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 6vh;
-    z-index: 40;
     padding: 1.5vh 0vh 1vh 0vh;
     margin: 0;
     background: none;
@@ -371,17 +363,8 @@
     color: #fff;
 }
 
-.projcap-title-collapsed:hover ~ .projcap-background-collapsed {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 .projcap-detail {
-    position: absolute;
-    left: 0;
-    top: 6vh;
     width: 100%;
-    height: 34vh;
-    z-index: 40;
     padding: 0;
     margin: 0;
     border: none;
@@ -407,8 +390,6 @@
 }
 
 .projcap-links {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 0;
     margin: 1vh 0;
@@ -440,8 +421,4 @@
     font-family: 'Roboto', sans-serif;
     font-size: 2vh;
     color: #fff;
-}
-
-.projcap-title-expanded, .projcap-detail-expanded {
-    transform: translateY(-34vh);
 }
