@@ -15,7 +15,7 @@ const About = (
         </div>
 
         <a
-            href={`${process.env.PUBLIC_URL}/resumedl/SonnyLiu_ResumeVer1.pdf`}
+            href="https://drive.google.com/file/d/1WefPrF5VRDtvfbAUKHUeGjhU0r4aZZuA/view?usp=sharing"
             download="SonnyLiuResume"
         >
             <button type="button" className="about-body-resume">
