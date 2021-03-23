@@ -28,7 +28,7 @@ class Home extends React.Component {
                     ))}
                 </ul>
                 <ReactFullpage
-                    //licenseKey = {'YOUR_KEY_HERE'}
+                    licenseKey = {'1AD62B4A-49E449C3-B614C0B4-833F4BED'}
                     anchors={anchors}
                     menu="#menu"
                     dragAndMove="true"
