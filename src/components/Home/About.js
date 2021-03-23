@@ -15,6 +15,8 @@ const About = (
         </div>
 
         <a
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://drive.google.com/file/d/1WefPrF5VRDtvfbAUKHUeGjhU0r4aZZuA/view?usp=sharing"
             download="SonnyLiuResume"
         >
