@@ -15,7 +15,7 @@ const data = [
     },
     {
         key: 'githublink',
-        link: 'https://github.com/thescigeek',
+        link: 'https://github.com/sliu2017',
         icon: GitHubLogo,
     },
 ];

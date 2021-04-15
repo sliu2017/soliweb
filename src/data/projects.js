@@ -8,7 +8,7 @@ const data = [
         demoExists: false,
         repoExists: true,
         demoLink: "",
-        repoLink: "https://github.com/thescigeek/soliweb",
+        repoLink: "https://github.com/sliu2017/soliweb",
     },
     {
         key: "project1",
@@ -20,7 +20,7 @@ const data = [
         demoExists: false,
         repoExists: true,
         demoLink: "",
-        repoLink: "https://github.com/thescigeek/Slackr-Final-Project",
+        repoLink: "https://github.com/sliu2017/Slackr-Final-Project",
     },
     {
         key: "project2",
